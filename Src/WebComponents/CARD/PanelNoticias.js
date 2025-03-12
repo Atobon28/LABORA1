@@ -12,22 +12,10 @@ class PanelNoticias extends HTMLElement {
 
     const style = document.createElement('style');
     style.textContent = `
-      :host {
-        display: flex;
-        justify-content: center;
-        width: 100vw;
-        height: 100vh;
-        overflow: auto;
-        background: #121212; 
-        padding: 40px 0;
-      }
-
       .panel-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 25px;
-        max-width: 900px;
-        width: 90%;
       }
 
       card-imagen {

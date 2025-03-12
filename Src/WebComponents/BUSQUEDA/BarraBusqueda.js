@@ -4,13 +4,21 @@ class BarraBusqueda extends HTMLElement {
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.innerHTML = `
         <style>
+          :host {
+            width: 100%;
+          }
+
           .container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            background: #0f0f0f;
-            padding: 10px;
-            border-radius: 10px;
+            align-items: center;
+            padding: 5px 0;
+            width: 100%;
+          }
+
+          .search-container {
+            display: flex;
+            align-items: center;
           }
           .buttons {
             display: flex;
@@ -19,8 +27,8 @@ class BarraBusqueda extends HTMLElement {
           .search {
             display: flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background-color:rgb(47, 46, 46);
+            border-radius: 8px;
             padding: 5px 15px;
           }
           input {
@@ -32,7 +40,7 @@ class BarraBusqueda extends HTMLElement {
             padding: 5px;
           }
           ::placeholder {
-            color: rgba(74, 56, 56, 0.5);
+            color: rgba(142, 125, 125, 0.5);
           }
           .icon {
             width: 20px;
@@ -48,14 +56,17 @@ class BarraBusqueda extends HTMLElement {
             <boton-personalizado>Design</boton-personalizado>
             <boton-personalizado>Engineering</boton-personalizado>
           </div>
-          <div class="search">
-            <img src="./Src/WebComponents/BUSQUEDA/IMG/icon.png" alt="search icon" class="icon">
-            <input type="text" placeholder="Search...">
+          <div class="search-container">
+            <div class="search">
+              <img src="./Src/WebComponents/BUSQUEDA/IMG/icon.png" alt="search icon" class="icon">
+              <input type="text" placeholder="Search...">
+            </div>
+            
           </div>
         </div>
       `;
     }
-  }
+  }// en la linea 64 poner el boton de filtro
   
 export default BarraBusqueda;
 
