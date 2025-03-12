@@ -9,7 +9,7 @@ class Card extends HTMLElement {
             color: white;
             border-radius: 10px;
             overflow: hidden;
-            width: 450px;
+            width: 100%;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;

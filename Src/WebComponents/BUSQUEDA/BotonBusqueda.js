@@ -5,7 +5,7 @@ class BotonBusqueda extends HTMLElement {
       this.shadowRoot.innerHTML = `
         <style>
           button {
-            background: rgba(255, 255, 255, 0.1);
+            background-color: #0f0f0f;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             color: white;
@@ -15,7 +15,7 @@ class BotonBusqueda extends HTMLElement {
             transition: background 0.3s;
           }
           button:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background-color:rgb(52, 52, 52);
           }
         </style>
         <button><slot></slot></button>
