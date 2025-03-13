@@ -40,7 +40,7 @@ class PanelNoticias extends HTMLElement {
         categoria="${item.categoria}" 
         titulo="${item.titulo}" 
         descripcion="${item.descripcion}" 
-        autor-imgen="${item['autor-imgen']}" 
+        autor-imagen="${item.autorImagen}" 
         autor-nombre="${item.autor}" 
         fecha="${item.fecha}">
       </card-imagen>

@@ -1,29 +1,18 @@
-class Card extends HTMLElement {
+class CardSinImg extends HTMLElement {
     constructor() {
-      super();
-      this.attachShadow({ mode: 'open' });
-      this.shadowRoot.innerHTML = `
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
         <style>
           .carta {
             background: #111;
             color: white;
             border-radius: 10px;
-            overflow: hidden;
             width: 100%;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-          }
-          .imagen {
-            width: 100%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-          }
-          .Contenido {
             padding: 20px;
-            display: flex;
-            flex-direction: column;
             gap: 10px;
           }
           .categoria {
@@ -43,7 +32,7 @@ class Card extends HTMLElement {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding-top: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
           }
           .autor {
@@ -62,26 +51,21 @@ class Card extends HTMLElement {
           }
         </style>
         <div class="carta">
-          <div class="imagen"></div>
-          <div class="contennido">
-            <div class="categoria"></div>
-            <div class="titulo"></div>
-            <div class="descripcion"></div>
-          </div>
+          <div class="categoria"></div>
+          <div class="titulo"></div>
+          <div class="descripcion"></div>
           <div class="footer">
-        <div class="autor">
-            <img class="autor-img" src="" alt="Autor">
-            <span class="autor-nombre"></span>
+            <div class="autor">
+              <img class="autor-img" src="" alt="Autor">
+              <span class="autor-nombre"></span>
+            </div>
+            <div class="fecha"></div>
+          </div>
         </div>
-        <div class="fecha"></div>
-        </div>
-        </div>
-      `;
+        `;
     }
-  
+
     connectedCallback() {
-      console.log(this.getAttribute('imagen')) 
-        this.shadowRoot.querySelector('.imagen').style.backgroundImage = `url(${this.getAttribute('imagen')})`;
         this.shadowRoot.querySelector('.categoria').innerText = this.getAttribute('categoria'); 
         this.shadowRoot.querySelector('.titulo').innerText = this.getAttribute('titulo');
         this.shadowRoot.querySelector('.descripcion').innerText = this.getAttribute('descripcion');
@@ -89,7 +73,6 @@ class Card extends HTMLElement {
         this.shadowRoot.querySelector('.autor-nombre').innerText = this.getAttribute('autor-nombre');
         this.shadowRoot.querySelector('.fecha').innerText = this.getAttribute('fecha');
     }
-  }
-  
+}
 
-export default Card;
+export default CardSinImg;
