@@ -21,7 +21,7 @@ class PanelNoticias extends HTMLElement {
       card-imagen {
         display: block;
         background: #1e1e1e;
-        border-radius: 16px;
+        border-radius: 20px;
         overflow: hidden;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out;
@@ -29,6 +29,7 @@ class PanelNoticias extends HTMLElement {
 
       card-imagen:hover {
         transform: scale(1.03);
+       
       }
     `;
 

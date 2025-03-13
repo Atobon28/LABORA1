@@ -16,6 +16,10 @@ class Numeros extends HTMLElement {
                     background: #222;
                     color: white;
                     text-align: center;
+
+                }
+                .page:hover {
+                    background: #ffffff;
                 }
                 .active {
                     background: white;

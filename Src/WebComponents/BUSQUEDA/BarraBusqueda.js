@@ -31,6 +31,8 @@ class BarraBusqueda extends HTMLElement {
             border-radius: 8px;
             padding: 5px 15px;
           }
+            .search:hover {
+                    background: #ffffff;}
           input {
             background: transparent;
             border: none;
@@ -56,6 +58,8 @@ class BarraBusqueda extends HTMLElement {
             <boton-personalizado>Design</boton-personalizado>
             <boton-personalizado>Engineering</boton-personalizado>
           </div>
+
+          
           <div class="search-container">
             <div class="search">
               <img src="./Src/WebComponents/BUSQUEDA/IMG/icon.png" alt="search icon" class="icon">
@@ -66,7 +70,9 @@ class BarraBusqueda extends HTMLElement {
         </div>
       `;
     }
-  }// en la linea 64 poner el boton de filtro
+  }
+  
+  // Poner el search container en otro web component
   
 export default BarraBusqueda;
 

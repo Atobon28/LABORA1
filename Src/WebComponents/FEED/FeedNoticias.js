@@ -8,24 +8,41 @@ class FeedNoticias extends HTMLElement {
       <style>
         .feed {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 20px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
           padding: 20px;
           max-width: 1200px;
           margin: auto;
         }
+
+        .midcard {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 10px;
+          width: 100%;
+          height: 100%;
+        }
       </style>
-      <div class="feed"></div>
+      <div class="feed">
+      </div>
     `;
   }
 
   connectedCallback() {
     const data = noticiasImag();
     const feedContainer = this.shadowRoot.querySelector('.feed');
+    const midcard = this.ownerDocument.createElement('div');
+    midcard.classList.add('midcard');
 
     console.log(data);
     
     data.slice(0, 4).forEach((noticia, index) => {
+    
+      if (index === 1) {
+        feedContainer.appendChild(midcard);
+      }
+
       const card = document.createElement(index === 0 || index === 3  ? 'card-imagen' : 'card-sin-img');
       
       card.setAttribute('categoria', noticia.categoria);
@@ -35,8 +52,13 @@ class FeedNoticias extends HTMLElement {
       card.setAttribute('autor-imagen', noticia.autorImagen);
       card.setAttribute('fecha', noticia.fecha);
       card.setAttribute('imagen', noticia.imagen);
+
+      if (index === 1 || index === 2) {
+        midcard.appendChild(card); 
+      } else {
+        feedContainer.appendChild(card);
+      }
       
-      feedContainer.appendChild(card);
     });
   }
 }

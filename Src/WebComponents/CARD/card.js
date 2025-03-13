@@ -6,8 +6,9 @@ class Card extends HTMLElement {
         <style>
           .carta {
             background: #111;
+            height: 450px;
             color: white;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
             width: 100%;
             font-family: Arial, sans-serif;
@@ -16,7 +17,7 @@ class Card extends HTMLElement {
           }
           .imagen {
             width: 100%;
-            height: 200px;
+            height: 400px;
             background-size: cover;
             background-position: center;
           }
@@ -24,20 +25,25 @@ class Card extends HTMLElement {
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 20px;
+            margin: 0 20px;
           }
           .categoria {
             font-size: 14px;
             color: white;
             text-transform: uppercase;
+            margin: 9px;
           }
           .titulo {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
+            margin: 9px;
+            
           }
           .descripcion {
-            font-size: 14px;
+            font-size: 12px;
             color: white;
+            gap:10px;
           }
           .footer {
             display: flex;
@@ -45,11 +51,13 @@ class Card extends HTMLElement {
             align-items: center;
             padding: 15px 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 9px
           }
           .autor {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+            
           }
           .autor-img {
             width: 25px;
@@ -59,6 +67,7 @@ class Card extends HTMLElement {
           .autor-nombre {
             font-size: 14px;
             color: #ddd;
+            gap: 10px;
           }
         </style>
         <div class="carta">

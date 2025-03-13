@@ -11,8 +11,6 @@ class PanelFinal extends HTMLElement {
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(10, auto);
           gap: 20px;
-          padding: 20px;
-          max-width: 1200px;
           margin: auto;
         }
       </style>
