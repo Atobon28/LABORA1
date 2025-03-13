@@ -31,6 +31,8 @@ class BarraBusqueda extends HTMLElement {
             border-radius: 8px;
             padding: 5px 15px;
           }
+            .search:hover {
+                    background: #ffffff;}
           input {
             background: transparent;
             border: none;

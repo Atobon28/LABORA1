@@ -1,6 +1,7 @@
 body {
     background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: start;
     align-items: start;
     margin-left: 150px;
@@ -15,7 +16,7 @@ body {
     align-items: center;
     justify-content: start;
     gap: 8px;
-    height: 130vh;
+    height: auto;
     width: 100%;
 }
 
@@ -53,3 +54,11 @@ p {
     margin-top: 20px;
     width: 100%;
 }
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
