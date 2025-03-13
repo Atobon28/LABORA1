@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: start;
     gap: 8px;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
 }
 
@@ -50,6 +50,6 @@ p {
 }
 
 #panel-noticias {
-    margin-top: 4px;
+    margin-top: 20px;
     width: 100%;
 }
