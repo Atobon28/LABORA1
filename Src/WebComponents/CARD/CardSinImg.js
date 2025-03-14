@@ -15,7 +15,7 @@ class CardSinImg extends HTMLElement {
             gap: 10px;
           }
           .categoria {
-            font-size: 14px;
+            font-size: 9px;
             color: white;
             text-transform: uppercase;
           }
@@ -26,6 +26,7 @@ class CardSinImg extends HTMLElement {
           .descripcion {
             font-size: 14px;
             color: white;
+            text-ident: 20px;
           }
           .footer {
             display: flex;

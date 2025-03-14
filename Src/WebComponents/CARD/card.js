@@ -29,7 +29,7 @@ class Card extends HTMLElement {
             margin: 0 20px;
           }
           .categoria {
-            font-size: 14px;
+            font-size: 9px;
             color: white;
             text-transform: uppercase;
             margin: 9px;
@@ -44,6 +44,8 @@ class Card extends HTMLElement {
             font-size: 12px;
             color: white;
             gap:10px;
+            text-aline:right;
+           
           }
           .footer {
             display: flex;
